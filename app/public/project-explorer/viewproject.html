@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>View Project</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-md navbar-dark bg-primary">
+        <a class="navbar-brand" href="index.html">Project Explorer</a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarsExampleDefault"
+          aria-controls="navbarsExampleDefault"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+          <form class="form-inline my-2 my-lg-0" name="searchForm">
+            <input
+              class="form-control mr-sm-2"
+              type="text"
+              placeholder="Search Projects"
+              aria-label="Search Projects"
+            />
+            <button class="btn btn-outline-light my-2 my-sm-0" type="submit">
+              Search
+            </button>
+          </form>
+          <ul class="navbar-nav mx-2">
+            <li class="nav-item">
+              <a href="createproject.html" class="nav-link">Submit</a>
+            </li>
+          </ul>
+
+          <ul class="navbar-nav ml-auto flex-row justify-content-between">
+            <li class="nav-item px-2">
+              <a class="nav-link" href="register.html">Sign up</a>
+            </li>
+            <li class="nav-item px-2">
+              <a class="nav-link" href="login.html">Login</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="container my-5">
+        <section>
+          <h3>Project 1</h3>
+
+          <div class="row m-0 bg-light p-3 my-2">
+            <div class="col">
+              <ul class="list-unstyled">
+                <li>Created By</li>
+                <li>Ade Chris</li>
+              </ul>
+            </div>
+            <div class="col">
+              <ul class="list-unstyled">
+                <li>Date Created</li>
+                <li>2020-08-30</li>
+              </ul>
+            </div>
+            <div class="col">
+              <ul class="list-unstyled">
+                <li>Last updated</li>
+                <li>2020-08-30</li>
+              </ul>
+            </div>
+            <div class="col d-flex justify-content-end">
+              <div>
+                <button class="btn btn-primary">Edit Project</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="my-5">
+          <div class="row">
+            <div class="col">
+              <section class="abstract">
+                <h6>Project Abstract</h6>
+                <hr />
+
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Sollicitudin nibh
+                  sit amet commodo nulla. Cum sociis natoque penatibus et magnis dis
+                  parturient. Facilisis mauris sit amet massa. Turpis egestas sed tempus
+                  urna et pharetra pharetra. Duis at tellus at urna. Cum sociis natoque
+                  penatibus et magnis dis parturient. Facilisis mauris sit amet massa.
+                  Turpis egestas sed tempus urna et pharetra pharetra. Duis at tellus at
+                  urna.
+                </p>
+              </section>
+              <section class="comment my-5">
+                <h6>Comments</h6>
+                <form>
+                  <div class="form-group">
+                    <textarea
+                      name="comment"
+                      id="comment"
+                      rows="4"
+                      placeholder="Leave a comment"
+                      class="form-control"
+                    ></textarea>
+                  </div>
+                  <div class="form-group">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </div>
+                </form>
+
+                <hr />
+
+                <div class="commnets">
+                  <p class="text-center">No comments added yet</p>
+                </div>
+              </section>
+            </div>
+            <div class="col">
+              <section>
+                <h6>Project Details</h6>
+                <hr />
+
+                <div class="card">
+                  <div class="card-header"><b>Author(s)</b></div>
+                  <div class="card-body">
+                    <p class="card-text">Ade Chris</p>
+                  </div>
+                  <div class="card-footer text-muted"><a href="#">#web</a></div>
+                </div>
+
+                <div class="card my-3">
+                  <div class="card-header">Project files</div>
+                  <div class="card-body">
+                    <p class="card-text text-center">No files uploaded yet</p>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h3>Project Details</h3>
+
+          <ul>
+            <li>Authors: John Doe, Jane Doe</li>
+            <li>Tags: #Asphyxia, #GSW</li>
+            <li>
+              Project Files: <a href="https://www.google.com">File 1</a>,
+              <a href="https://www.google.com">File 2</a>
+            </li>
+          </ul>
+        </section>
+      </section>
+    </main>
+
+    <footer class="bg-light p-3">
+      <div class="container d-flex">
+        <p class="ml-auto">
+          <span class="text-muted">Project Explorer</span> &copy; 2020
+          &FilledVerySmallSquare; <strong>Kwadoskii</strong>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

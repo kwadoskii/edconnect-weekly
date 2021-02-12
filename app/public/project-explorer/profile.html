@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-md navbar-dark bg-primary">
+        <a class="navbar-brand" href="index.html">Project Explorer</a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarsExampleDefault"
+          aria-controls="navbarsExampleDefault"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+          <form class="form-inline my-2 my-lg-0" name="searchForm">
+            <input
+              class="form-control mr-sm-2"
+              type="text"
+              placeholder="Search Projects"
+              aria-label="Search Projects"
+            />
+            <button class="btn btn-outline-light my-2 my-sm-0" type="submit">
+              Search
+            </button>
+          </form>
+          <ul class="navbar-nav mx-2">
+            <li class="nav-item">
+              <a href="createproject.html" class="nav-link">Submit</a>
+            </li>
+          </ul>
+
+          <ul class="navbar-nav ml-auto flex-row justify-content-between">
+            <li class="nav-item px-2">
+              <a class="nav-link" href="register.html">Sign up</a>
+            </li>
+            <li class="nav-item px-2">
+              <a class="nav-link" href="login.html">Login</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="container my-5">
+        <section>
+          <ul class="list-inline">
+            <li class="list-inline-item"><h3>John Doe</h3></li>
+            <li class="list-inline-item">
+              <h6 class="text-muted">john.doe@gmail.com</h6>
+            </li>
+          </ul>
+
+          <div class="row m-0 bg-light p-3 my-2">
+            <div class="col">
+              <ul class="list-unstyled">
+                <li>Program:</li>
+                <li>Computer Science</li>
+              </ul>
+            </div>
+            <div class="col">
+              <ul class="list-unstyled">
+                <li>Matric:</li>
+                <li>00/0000</li>
+              </ul>
+            </div>
+            <div class="col">
+              <ul class="list-unstyled">
+                <li>Graduation Year:</li>
+                <li>2019</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="mt-5">
+          <h6>Update Profile</h6>
+          <hr />
+
+          <form name="updateProfile" class="my-4 mx-auto w-75">
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label class="col-form-label" for="firstName">First Name</label>
+                <input class="form-control" type="text" name="firstName" id="firstName" />
+              </div>
+              <div class="form-group col-md-6">
+                <label class="col-form-label" for="lastName">Last Name</label>
+                <input class="form-control" type="text" name="lastName" id="lastName" />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label class="col-form-label" for="email">Email Address</label>
+                <input class="form-control" type="email" name="email" id="email" />
+              </div>
+              <div class="form-group col-md-6">
+                <label class="col-form-label" for="program">Program</label>
+                <select class="form-control" name="program" id="program">
+                  <option value="computer_science">Computer Science</option>
+                  <option value="computer_information_systems">
+                    Computer Information Systems
+                  </option>
+                  <option value="computer_technology">Computer Technology</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label class="col-form-label" for="matricNumber">Matric Number</label>
+                <input
+                  class="form-control"
+                  type="text"
+                  name="matricNumber"
+                  id="matricNumber"
+                />
+              </div>
+              <div class="form-group col-md-6">
+                <label class="col-form-label" for="graduationYear">Graduation Year</label>
+                <select class="form-control" name="graduationYear" id="graduationYear">
+                  <option value="2013">2013</option>
+                  <option value="2014">2014</option>
+                  <option value="2015">2015</option>
+                  <option value="2016">2016</option>
+                  <option value="2017">2017</option>
+                  <option value="2018">2018</option>
+                  <option value="2019">2019</option>
+                  <option value="2020">2020</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <button type="submit" class="btn btn-primary">Update Profile</button>
+            </div>
+          </form>
+        </section>
+
+        <section class="mt-5">
+          <h6>Change Password</h6>
+          <hr />
+
+          <form name="changePassword" class="my-4 mx-auto w-75">
+            <div class="form-row">
+              <div class="form-group col-md-4">
+                <label class="col-form-label" for="currentPassword"
+                  >Current Password</label
+                >
+                <input
+                  class="form-control"
+                  type="password"
+                  name="currentPassword"
+                  id="currentPassword"
+                  placeholder="Current Password"
+                />
+              </div>
+              <div class="form-group col-md-4">
+                <label class="col-form-label" for="newPassword">New Password</label>
+                <input
+                  class="form-control"
+                  type="password"
+                  name="newPassword"
+                  id="newPassword"
+                  placeholder="Your new password"
+                />
+              </div>
+              <div class="form-group col-md-4">
+                <label class="col-form-label" for="confirmPassword"
+                  >Confirm Password</label
+                >
+                <input
+                  class="form-control"
+                  type="password"
+                  name="confirmPassword"
+                  id="confirmPassword"
+                  placeholder="Confirm new password"
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <button type="submit" class="btn btn-primary">Change Password</button>
+            </div>
+          </form>
+        </section>
+      </section>
+    </main>
+
+    <footer class="bg-light p-3">
+      <div class="container d-flex">
+        <p class="ml-auto">
+          <span class="text-muted">Project Explorer</span> &copy; 2020
+          &FilledVerySmallSquare; <strong>Kwadoskii</strong>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
