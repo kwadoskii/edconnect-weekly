@@ -1,36 +1,52 @@
 class DataModel {
-    constructor() {
-        this.data = [];
+  constructor() {
+    this.data = [];
+  }
+
+  getAll() {
+    return this.data;
+  }
+
+  getById(id) {
+    let requireData = this.data.filter((d) => id === d.id);
+
+    return requireData.length ? requireData : null;
+  }
+
+  save(obj) {
+    if (this.validate(obj)) {
+      this.data.push(obj);
+      return true;
     }
+    return false;
+  }
 
-    getAll() {
-        return this.data;
-    }
+  update(obj, id) {
+    const toBeUpdated = this.data.filter((d, i) => {
+      if (id === d.id) {
+        this.data[i] = obj;
+      }
+    });
 
-    getById(id) {
+    return toBeUpdated.length ? true : false;
+  }
 
-    }
+  delete(id) {
+    let isDeleted;
+    this.data.filter((d, i) => {
+      if (id === d.id) {
+        this.data.splice(i, 1);
+        return (isDeleted = true);
+      }
+    });
 
-    save(obj) {
-        if (this.validate(obj)) {
-            this.data.push(obj);
-            return true;
-        }
-        return false;
-    }
+    return isDeleted ? true : false;
+  }
 
-    update(obj, id) {
-
-    }
-
-    delete(id) {
-
-    }
-
-    // this method will be overriden in the sub classes
-    validate(obj) {
-        return false;
-    }
+  // this method will be overriden in the sub classes
+  validate(obj) {
+    return false;
+  }
 }
 
 // Do not worry about the below for now; It is included so that we can test your code
