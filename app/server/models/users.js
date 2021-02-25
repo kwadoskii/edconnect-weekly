@@ -19,6 +19,8 @@ class User {
     this.matricNumber = matricNumber;
     this.program = program;
     this.graduationYear = graduationYear;
+
+    this.requiredUser = {};
   }
 
   getFullName() {
@@ -34,13 +36,13 @@ class Users extends DataModel {
   }
 
   getByEmail(email) {
-    const requiredUser = this.data.filter((d) => d.email === email);
-    return requiredUser.length ? requiredUser : null;
+    this.requiredUser = this.data.filter((d) => d.email === email);
+    return this.requiredUser.length ? this.requiredUser[0] : null;
   }
 
   getByMatricNumber(matricNumber) {
-    const requiredMatricNumber = this.data.filter((d) => d.matricNumber === matricNumber);
-    return requiredMatricNumber.length ? requiredMatricNumber : null;
+    this.requiredUser = this.data.filter((d) => d.matricNumber === matricNumber);
+    return this.requiredUser.length ? this.requiredUser[0] : null;
   }
 
   validate(obj) {

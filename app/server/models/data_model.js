@@ -1,6 +1,7 @@
 class DataModel {
   constructor() {
     this.data = [];
+    this.requiredData = {};
   }
 
   getAll() {
@@ -8,9 +9,9 @@ class DataModel {
   }
 
   getById(id) {
-    let requireData = this.data.filter((d) => id === d.id);
+    this.requireData = this.data.filter((d) => id === d.id);
 
-    return requireData.length ? requireData : null;
+    return this.requireData.length ? this.requireData[0] : null;
   }
 
   save(obj) {
@@ -22,13 +23,16 @@ class DataModel {
   }
 
   update(obj, id) {
-    const toBeUpdated = this.data.filter((d, i) => {
+    this.requireData = this.data.filter((d, i) => {
       if (id === d.id) {
-        this.data[i] = obj;
+        for (let key in obj) {
+          this.data[i][key] = obj[key];
+        }
+        return this.data[i];
       }
     });
 
-    return toBeUpdated.length ? true : false;
+    return this.requireData.length ? true : false;
   }
 
   delete(id) {
